@@ -1,12 +1,16 @@
 // In src/index.js
 const express = require("express");
 
+const bodyParser = require("body-parser");
+
 // *** ADD ***
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// *** ADD ***
+app.use(bodyParser.json());
 
 
 // *** ADD ***
